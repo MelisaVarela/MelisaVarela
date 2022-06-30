@@ -1,0 +1,76 @@
+html {
+	height: 100%;
+}
+
+.sliderText {
+	top: 35%;
+    transform: translateY(-50%);
+}
+
+.neon {
+	font-size: 60px;
+	color: #fff;
+	margin-top: 40%;
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.mainMargin {
+	margin-top: 136px;
+}
+
+.copy {
+	text-align: center;
+	padding: 50px;
+}
+
+.usMargin {
+	margin: 0 20px;
+}
+
+.textPaddingLR {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.borderTop {
+	border-top: 2px solid black;
+}
+
+.textPadding {
+	padding: 10px;
+}
+
+.marginRight {
+	margin-right: 20px;
+}
+
+.sliderTextDesc {
+	border-radius: 30px;
+	background-color: rgba(0, 179, 255, 0.3);
+	text-decoration: none;
+	padding: 12px 33px;
+	font-weight: bolder;
+	color: white;
+	font-size: 20px;
+}
+
+.pop {
+	width: 50% !important;
+}
+
+.clients {
+	height: 200px;
+}

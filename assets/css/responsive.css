@@ -1,0 +1,50 @@
+
+@media (max-width: 575px) {
+    
+    .logo {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    
+    .textMenu {
+        color: black !important;
+    }
+    
+    .copy {
+        padding: 25px !important;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .textMenu {
+        color: white !important;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .logo {
+        width: 95px;
+        height: 95px;
+    }
+
+    .footer {
+        height: 75%;
+    }
+
+    .mainMargin {
+        margin-top: 96px!important;
+    
+    }
+
+    .sliderTextDesc {
+        font-size: 15px !important;
+    }
+
+    .neon {
+        font-size: 40px !important;
+    }
+}
