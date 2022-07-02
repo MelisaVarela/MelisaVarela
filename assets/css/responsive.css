@@ -14,6 +14,12 @@
     .copy {
         padding: 25px !important;
     }
+
+    .h-100 {
+        width: 90%;
+        font-size: 10px;
+        margin: auto;
+    }
 }
 
 @media (min-width: 576px) {
