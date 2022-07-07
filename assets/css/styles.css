@@ -1,0 +1,132 @@
+.sliderText {
+  top: 35%;
+  transform: translateY(-50%);
+}
+.sliderText .sliderTextTitle {
+  font-size: 60px;
+  color: #fff;
+  margin-top: 40%;
+  text-shadow: 0 0 5px rgb(0, 178, 255), 0 0 10px rgb(0, 178, 255), 0 0 20px rgb(0, 178, 255), 0 0 40px rgb(38, 104, 127), 0 0 80px rgb(38, 104, 127), 0 0 90px rgb(38, 104, 127), 0 0 100px rgb(38, 104, 127), 0 0 140px rgb(38, 104, 127), 0 0 180px rgb(38, 104, 127);
+}
+.sliderText .sliderTextDesc {
+  border-radius: 30px;
+  background-color: rgba(0, 179, 255, 0.3);
+  text-decoration: none;
+  padding: 12px 33px;
+  font-weight: bolder;
+  color: white;
+  font-size: 20px;
+}
+
+.borderTop {
+  border-top: 2px solid black;
+}
+.borderTop .textCenter {
+  text-align: center;
+}
+.borderTop .textCenter .textPadding {
+  padding: 10px;
+}
+
+.mainMargin {
+  margin-top: 136px;
+}
+.mainMargin .copy {
+  text-align: center;
+  padding: 50px;
+}
+.mainMargin .container {
+  overflow: hidden;
+  padding: 30px 0;
+}
+.mainMargin .container .slider {
+  -webkit-animation: slidein 30s linear infinite;
+          animation: slidein 30s linear infinite;
+  white-space: nowrap;
+  padding-top: 30px;
+}
+.mainMargin .container .slider .logos {
+  width: 100%;
+  display: inline-block;
+  margin: 0px 0;
+}
+.mainMargin .container .slider .logos .fab {
+  width: 20%;
+  -webkit-animation: fadein 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+          animation: fadein 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+.mainMargin .video iframe {
+  width: 100%;
+  height: 300px;
+}
+.mainMargin .projectImg {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+nav a {
+  transition: all 2s !important;
+}
+nav a:hover {
+  color: #EE5525 !important;
+  font-size: 25px;
+}
+nav .pop {
+  width: 50% !important;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    /*opacity: 0;*/
+    filter: grayscale(100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    /*opacity: 0;*/
+    filter: grayscale(100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=styles.css.map */
