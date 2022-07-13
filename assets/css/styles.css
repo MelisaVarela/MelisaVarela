@@ -67,6 +67,17 @@
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
+.mainMargin .IdCards {
+  margin-bottom: 30px;
+}
+.mainMargin .contact {
+  border: solid 1px grey;
+  border-radius: 10px;
+  margin: 10px;
+}
+.mainMargin .itemContact {
+  margin: 20px 0;
+}
 
 nav a {
   transition: all 2s !important;
