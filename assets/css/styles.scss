@@ -1,9 +1,28 @@
+/*==== MAP ====*/
+$generalStyles: (
+    colorWhite: white,
+    centeredText: center,
+    totalWidth: 100%,
+    colorOrange: orange,
+);
+
+/*==== FIN MAP ====*/
+
+/*==== MIXIN ====*/
+@mixin sizes ($width, $height) {
+    width: $width;
+    height: $height;
+}
+/*==== FIN MIXIN ====*/
+
+
 .sliderText {
 	top: 35%;
     transform: translateY(-50%);
     .sliderTextTitle {
         font-size: 60px;
-        color: #fff;
+        /*color: #fff;*/
+        color: map-get($generalStyles, colorWhite);
         margin-top: 40%;
         text-shadow:
             0 0 5px rgba(0,178,255,1),
@@ -22,14 +41,16 @@
         text-decoration: none;
         padding: 12px 33px;
         font-weight: bolder;
-        color: white;
+        /*color: white;*/
+        color: map-get($generalStyles, colorWhite);
         font-size: 20px;
     }
 }
 .borderTop {
 	border-top: 2px solid black;
     .textCenter {
-        text-align: center;
+        /*text-align: center;*/
+        text-align: map-get($generalStyles, centeredText);
         .textPadding {
             padding: 10px;
         }
@@ -39,7 +60,8 @@
 .mainMargin {
 	margin-top: 136px;
     .copy {
-        text-align: center;
+        /*text-align: center;*/
+        text-align: map-get($generalStyles, centeredText);
         padding: 50px;
       }
     .container {
@@ -50,7 +72,8 @@
             white-space: nowrap;
             padding-top: 30px;
             .logos {
-                width: 100%;
+                /*width: 100%;*/
+                width: map-get($generalStyles, totalWidth);
                 display: inline-block;
                 margin: 0px 0;
                 .fab {
@@ -59,28 +82,39 @@
                 }
             }
         }
-    }
-    .video iframe {
-        width: 100%;
-        height: 300px;
         
+        .projectImg {
+            animation-duration: 10s;
+            animation-name: appear;
+            animation-iteration-count: 1;
+        }
+        .itemContact {
+            margin: 20px 0;
+            iframe {
+                /*=== MIXIN ===*/
+                @include sizes(100%, 350px)
+            }
+        }
+        .IdCards {
+            margin-bottom: 30px;
+            .card-text {
+                /*==== EXTEND ====*/
+                @extend .copy;
+                font-size: 1.3rem;
+            }
+        }
+        .video iframe {
+            /*width: 100%;*/
+            /*width: map-get($generalStyles, totalWidth);*/
+            /*height: 300px;*/
+            /*=== MIXIN ===*/
+            @include sizes(100%, 300px)
+            
+        }
     }
-    .projectImg {
-        animation-duration: 10s;
-        animation-name: appear;
-        animation-iteration-count: 1;
-    }
-    .IdCards {
-        margin-bottom: 30px;
-    }
-    .contact {
-        border: solid 1px grey;
-        border-radius: 10px;
-        margin: 10px;
-    }
-    .itemContact {
-        margin: 20px 0;
-    }
+    
+    
+    
     
 }
 
@@ -88,7 +122,8 @@ nav {
     a {
 	transition: all 2s !important;
     &:hover {
-        color: #EE5525 !important;
+        /*color: #EE5525 !important;*/
+        color: map-get($generalStyles, colorOrange) !important;
         font-size: 25px;
     }
     }
