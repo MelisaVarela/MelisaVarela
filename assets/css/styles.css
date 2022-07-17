@@ -8,18 +8,16 @@
 }
 .sliderText .sliderTextTitle {
   font-size: 60px;
-  /*color: #fff;*/
   color: white;
   margin-top: 40%;
-  text-shadow: 0 0 5px rgb(0, 178, 255), 0 0 10px rgb(0, 178, 255), 0 0 20px rgb(0, 178, 255), 0 0 40px rgb(38, 104, 127), 0 0 80px rgb(38, 104, 127), 0 0 90px rgb(38, 104, 127), 0 0 100px rgb(38, 104, 127), 0 0 140px rgb(38, 104, 127), 0 0 180px rgb(38, 104, 127);
+  text-shadow: 0 0 20px rgb(255, 140, 0), 0 0 40px rgb(127, 91, 38), 0 0 40px rgb(127, 65, 38), 0 0 80px rgb(127, 65, 38), 0 0 90px rgb(127, 65, 38), 0 0 100px rgb(127, 65, 38), 0 0 140px rgb(127, 65, 38), 0 0 180px rgb(127, 65, 38);
 }
 .sliderText .sliderTextDesc {
   border-radius: 30px;
-  background-color: rgba(0, 179, 255, 0.3);
+  background-color: rgba(255, 136, 0, 0.3);
   text-decoration: none;
   padding: 12px 33px;
   font-weight: bolder;
-  /*color: white;*/
   color: white;
   font-size: 20px;
 }
@@ -28,7 +26,6 @@
   border-top: 2px solid black;
 }
 .borderTop .textCenter {
-  /*text-align: center;*/
   text-align: center;
 }
 .borderTop .textCenter .textPadding {
@@ -39,7 +36,6 @@
   margin-top: 136px;
 }
 .mainMargin .copy, .mainMargin .container .IdCards .card-text {
-  /*text-align: center;*/
   text-align: center;
   padding: 50px;
 }
@@ -51,10 +47,9 @@
   -webkit-animation: slidein 30s linear infinite;
           animation: slidein 30s linear infinite;
   white-space: nowrap;
-  padding-top: 30px;
+  padding-top: 50px;
 }
 .mainMargin .container .slider .logos {
-  /*width: 100%;*/
   width: 100%;
   display: inline-block;
   margin: 0px 0;
@@ -80,6 +75,9 @@
   width: 100%;
   height: 350px;
 }
+.mainMargin .container .itemContact div {
+  margin: 20px 0;
+}
 .mainMargin .container .IdCards {
   margin-bottom: 30px;
 }
@@ -88,23 +86,32 @@
   font-size: 1.3rem;
 }
 .mainMargin .container .video iframe {
-  /*width: 100%;*/
-  /*width: map-get($generalStyles, totalWidth);*/
-  /*height: 300px;*/
   /*=== MIXIN ===*/
   width: 100%;
   height: 300px;
 }
+.mainMargin .container .video p {
+  padding: 20px 0;
+}
+.mainMargin .container .video ul {
+  list-style: none;
+  text-align: center;
+}
 .mainMargin .container .textPaddingLR {
   padding: 0 20px;
+}
+.mainMargin .container .projects {
+  padding: 10px;
+}
+.mainMargin .container .contactBox {
+  align-items: center;
 }
 
 nav a {
   transition: all 2s !important;
 }
 nav a:hover {
-  /*color: #EE5525 !important;*/
-  color: orange !important;
+  color: #EB5F0A !important;
   font-size: 25px;
 }
 nav .pop {
@@ -146,7 +153,6 @@ nav .pop {
 }
 @-webkit-keyframes appear {
   0% {
-    /*opacity: 0;*/
     filter: grayscale(100%);
   }
   100% {
@@ -155,7 +161,6 @@ nav .pop {
 }
 @keyframes appear {
   0% {
-    /*opacity: 0;*/
     filter: grayscale(100%);
   }
   100% {

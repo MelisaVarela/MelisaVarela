@@ -1,11 +1,9 @@
-
 @media (max-width: 575px) {
     
     .logo {
         width: 70px !important;
         height: 70px !important;
     }
-    
     
     .textMenu {
         color: black !important;
@@ -28,6 +26,22 @@
     .container {
         width: 90%;
     }
+
+    .sliderText {
+        top: 25% !important;
+        
+    }
+    .sliderTextTitle {
+        font-size: 40px !important;
+    }
+    
+    .card-text {
+        padding: 5px !important;
+    }
+    .card {
+        width: 100% !important;
+    }
+
 }
 
 @media (min-width: 576px) {
@@ -38,9 +52,6 @@
 
 }
 
-
-
-
 @media (max-width: 767px) {
     .logo {
         width: 95px;
@@ -50,9 +61,9 @@
     .footer {
         height: 75%;
     }
-
+    
     .mainMargin {
-        margin-top: 96px!important;
+        margin-top: 76px!important;
     
     }
 
@@ -63,5 +74,7 @@
     .neon {
         font-size: 40px !important;
     }
+    .copy {
+        padding-top: 100px !important;
+    }
 }
-

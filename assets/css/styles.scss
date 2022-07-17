@@ -1,9 +1,11 @@
+
+
 /*==== MAP ====*/
 $generalStyles: (
     colorWhite: white,
     centeredText: center,
     totalWidth: 100%,
-    colorOrange: orange,
+    colorOrange: #EB5F0A,
 );
 
 /*==== FIN MAP ====*/
@@ -21,27 +23,26 @@ $generalStyles: (
     transform: translateY(-50%);
     .sliderTextTitle {
         font-size: 60px;
-        /*color: #fff;*/
         color: map-get($generalStyles, colorWhite);
         margin-top: 40%;
         text-shadow:
-            0 0 5px rgba(0,178,255,1),
-            0 0 10px rgba(0,178,255,1),
-            0 0 20px rgba(0,178,255,1),
-            0 0 40px rgba(38,104,127,1),
-            0 0 80px rgba(38,104,127,1),
-            0 0 90px rgba(38,104,127,1),
-            0 0 100px rgba(38,104,127,1),
-            0 0 140px rgba(38,104,127,1),
-            0 0 180px rgba(38,104,127,1);
+            /*0 0 5px rgb(255, 111, 0),
+            0 0 10px rgb(255, 106, 0),*/
+            0 0 20px rgb(255, 140, 0),
+            0 0 40px rgb(127, 91, 38),
+            0 0 40px rgba(127, 65, 38,1),
+            0 0 80px rgba(127, 65, 38,1),
+            0 0 90px rgba(127, 65, 38,1),
+            0 0 100px rgba(127, 65, 38,1),
+            0 0 140px rgba(127, 65, 38,1),
+            0 0 180px rgba(127, 65, 38,1);
     }
     .sliderTextDesc {
         border-radius: 30px;
-        background-color: rgba(0, 179, 255, 0.3);
+        background-color: rgba(255, 136, 0, 0.3);
         text-decoration: none;
         padding: 12px 33px;
         font-weight: bolder;
-        /*color: white;*/
         color: map-get($generalStyles, colorWhite);
         font-size: 20px;
     }
@@ -49,7 +50,6 @@ $generalStyles: (
 .borderTop {
 	border-top: 2px solid black;
     .textCenter {
-        /*text-align: center;*/
         text-align: map-get($generalStyles, centeredText);
         .textPadding {
             padding: 10px;
@@ -60,7 +60,6 @@ $generalStyles: (
 .mainMargin {
 	margin-top: 136px;
     .copy {
-        /*text-align: center;*/
         text-align: map-get($generalStyles, centeredText);
         padding: 50px;
       }
@@ -70,9 +69,8 @@ $generalStyles: (
         .slider {
             animation: slidein 30s linear infinite;
             white-space: nowrap;
-            padding-top: 30px;
+            padding-top: 50px;
             .logos {
-                /*width: 100%;*/
                 width: map-get($generalStyles, totalWidth);
                 display: inline-block;
                 margin: 0px 0;
@@ -94,6 +92,9 @@ $generalStyles: (
                 /*=== MIXIN ===*/
                 @include sizes(100%, 350px)
             }
+            div {
+                margin: 20px 0;
+            }
         }
         .IdCards {
             margin-bottom: 30px;
@@ -103,17 +104,30 @@ $generalStyles: (
                 font-size: 1.3rem;
             }
         }
-        .video iframe {
-            /*width: 100%;*/
-            /*width: map-get($generalStyles, totalWidth);*/
-            /*height: 300px;*/
-            /*=== MIXIN ===*/
-            @include sizes(100%, 300px)
-            
+        .video { 
+            iframe {
+                /*=== MIXIN ===*/
+                @include sizes(100%, 300px)
+                
+            }
+            p {
+                padding: 20px 0;
+            }
+            ul {
+                list-style: none;
+                text-align: center;
+            }
         }
         .textPaddingLR {
             padding: 0 20px;
         }
+        .projects {
+            padding: 10px;
+        }
+        .contactBox {
+            align-items: center;
+        }
+        
     }
     
     
@@ -125,7 +139,6 @@ nav {
     a {
 	transition: all 2s !important;
     &:hover {
-        /*color: #EE5525 !important;*/
         color: map-get($generalStyles, colorOrange) !important;
         font-size: 25px;
     }
@@ -133,6 +146,7 @@ nav {
     .pop {
         width: 50% !important;
     }
+    
 }
 
 @keyframes slidein {
@@ -154,10 +168,10 @@ nav {
 }
 @keyframes appear {
 	0% {
-		/*opacity: 0;*/
 		filter: grayscale(100%);
 	}
 	100% {
 		opacity: 1;
 	}
 }
+
