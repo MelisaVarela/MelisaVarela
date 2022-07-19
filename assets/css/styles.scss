@@ -74,9 +74,10 @@ $generalStyles: (
                 width: map-get($generalStyles, totalWidth);
                 display: inline-block;
                 margin: 0px 0;
-                .fab {
+                img {
                     width: calc(100% / 5);
                     animation: fadein 0.5s	cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+                    padding: 0 60px;
                 }
             }
         }
@@ -175,3 +176,8 @@ nav {
 	}
 }
 
+footer {
+    a:hover {
+        color: map-get($generalStyles, colorOrange) !important;
+    }
+}

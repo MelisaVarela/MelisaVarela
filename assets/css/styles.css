@@ -54,10 +54,11 @@
   display: inline-block;
   margin: 0px 0;
 }
-.mainMargin .container .slider .logos .fab {
+.mainMargin .container .slider .logos img {
   width: 20%;
   -webkit-animation: fadein 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
           animation: fadein 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  padding: 0 60px;
 }
 .mainMargin .container .projectImg {
   -webkit-animation-duration: 10s;
@@ -166,4 +167,7 @@ nav .pop {
   100% {
     opacity: 1;
   }
+}
+footer a:hover {
+  color: #EB5F0A !important;
 }/*# sourceMappingURL=styles.css.map */
