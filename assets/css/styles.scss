@@ -59,6 +59,7 @@ $generalStyles: (
 
 .mainMargin {
 	margin-top: 136px;
+    
     .copy {
         text-align: map-get($generalStyles, centeredText);
         padding: 50px;
@@ -177,7 +178,7 @@ nav {
 }
 
 footer {
-    a:hover {
+    .btn-social:hover {
         color: map-get($generalStyles, colorOrange) !important;
     }
 }

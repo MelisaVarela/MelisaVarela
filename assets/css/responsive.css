@@ -35,6 +35,7 @@
 
     .logos img {
         width: calc(100% / 2.3) !important;
+        padding: 0 50px !important;
         
     }
 }
@@ -84,7 +85,8 @@
     }
 
     .logos img {
-        width: calc(100% / 1.7) !important;
+        width: calc(100% / 2) !important;
+        padding: 0 20px !important;
         
     }
 
@@ -98,3 +100,10 @@
 
 }
 
+@media (max-width: 350px) {
+    .logos img {
+        width: calc(100% / 1.5) !important;
+        padding: 0 15px !important;
+        
+    }
+}

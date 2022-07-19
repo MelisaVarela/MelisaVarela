@@ -168,6 +168,6 @@ nav .pop {
     opacity: 1;
   }
 }
-footer a:hover {
+footer .btn-social:hover {
   color: #EB5F0A !important;
 }/*# sourceMappingURL=styles.css.map */
