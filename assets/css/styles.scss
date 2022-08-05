@@ -1,13 +1,14 @@
-
-
 /*==== MAP ====*/
 $generalStyles: (
+    colorBlack: black,
     colorWhite: white,
-    centeredText: center,
-    totalWidth: 100%,
     colorOrange: #EB5F0A,
+    colorOrangeOpacity01: rgba(255, 136, 0, 0.1),
+    colorOrangeOpacity03: rgba(255, 136, 0, 0.3),
+    colorOrangeOpacity06: rgba(255, 136, 0, 0.6),
+    centeredText: center,
+    totalWidth: 100%,  
 );
-
 /*==== FIN MAP ====*/
 
 /*==== MIXIN ====*/
@@ -17,7 +18,6 @@ $generalStyles: (
 }
 /*==== FIN MIXIN ====*/
 
-
 .sliderText {
 	top: 35%;
     transform: translateY(-50%);
@@ -26,8 +26,6 @@ $generalStyles: (
         color: map-get($generalStyles, colorWhite);
         margin-top: 40%;
         text-shadow:
-            /*0 0 5px rgb(255, 111, 0),
-            0 0 10px rgb(255, 106, 0),*/
             0 0 20px rgb(255, 140, 0),
             0 0 40px rgb(127, 91, 38),
             0 0 40px rgba(127, 65, 38,1),
@@ -39,7 +37,7 @@ $generalStyles: (
     }
     .sliderTextDesc {
         border-radius: 30px;
-        background-color: rgba(255, 136, 0, 0.3);
+        background-color: map-get($generalStyles, colorOrangeOpacity03);
         text-decoration: none;
         padding: 12px 33px;
         font-weight: bolder;
@@ -48,35 +46,44 @@ $generalStyles: (
     }
 }
 .borderTop {
-	border-top: 2px solid black;
+	border-top: 2px solid map-get($generalStyles, colorBlack);
     .textCenter {
         text-align: map-get($generalStyles, centeredText);
-        .textPadding {
+        .textFooter {
             padding: 10px;
+            color: #676767;
         }
     }
 }
 
 .mainMargin {
-	margin-top: 136px;
-    
+	margin-top: 8rem;
+
     .copy {
         text-align: map-get($generalStyles, centeredText);
         padding: 50px;
       }
+
+    .copy:hover {
+        color: map-get($generalStyles, colorOrange);
+    }
+
     .container {
         overflow: hidden;
         padding: 30px 0;
+
         .slider {
             animation: slidein 30s linear infinite;
             white-space: nowrap;
             padding-top: 50px;
+
             .logos {
                 width: map-get($generalStyles, totalWidth);
                 display: inline-block;
                 margin: 0px 0;
-                img {
-                    width: calc(100% / 5);
+
+                .clientLogo {
+                    width: 250px;
                     animation: fadein 0.5s	cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
                     padding: 0 60px;
                 }
@@ -88,67 +95,172 @@ $generalStyles: (
             animation-name: appear;
             animation-iteration-count: 1;
         }
+
         .itemContact {
             margin: 20px 0;
+            textarea:focus, 
+            input[type="text"]:focus, 
+            input[type="password"]:focus, 
+            input[type="datetime"]:focus, 
+            input[type="datetime-local"]:focus, 
+            input[type="date"]:focus, 
+            input[type="month"]:focus, 
+            input[type="time"]:focus, 
+            input[type="week"]:focus, 
+            input[type="number"]:focus, 
+            input[type="email"]:focus, 
+            input[type="url"]:focus, 
+            input[type="search"]:focus, 
+            input[type="tel"]:focus, 
+            input[type="color"]:focus, 
+            .uneditable-input:focus { 
+                border-color: rgba(235, 95, 10, 0.3); 
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(235, 95, 10, 0.6); 
+                outline: 0 none; 
+            }
+
+            button[type="submit"]:hover,
+            .uneditable-button:hover {
+                --bs-btn-hover-color: map-get($generalStyles, colorWhite);
+                --bs-btn-hover-bg: rgba(235, 95, 10, 0.9);
+                --bs-btn-hover-border-color: rgba(235, 95, 10, 0.1);
+            }
+
+            .card-body > h5:hover {
+                color: map-get($generalStyles, colorOrange);
+            }
+              
             iframe {
                 /*=== MIXIN ===*/
-                @include sizes(100%, 350px)
+                @include sizes(100%, 500px);
+                border-radius: 0.375rem;
             }
+            
             div {
                 margin: 20px 0;
             }
+            
         }
         .IdCards {
             margin-bottom: 30px;
+
             .card-text {
                 /*==== EXTEND ====*/
                 @extend .copy;
                 font-size: 1.3rem;
             }
         }
+
         .video { 
+
             iframe {
                 /*=== MIXIN ===*/
-                @include sizes(100%, 300px)
+                @include sizes(100%, 400px)
                 
             }
+
             p {
                 padding: 20px 0;
             }
+
             ul {
                 list-style: none;
                 text-align: center;
             }
         }
+
         .textPaddingLR {
             padding: 0 20px;
         }
+
         .projects {
             padding: 10px;
+            
+            .contenedorProject {
+                position: relative;
+
+                .animProjects {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    transition: 1.5s ease;
+                    background-color: rgba(235, 95, 10, 0.6);
+
+                    .animDiv {
+                        color: map-get($generalStyles, colorWhite);
+                        font-size: 30px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+                }
+            }
+
+            .contenedorProject:hover {
+
+                .animProjects {
+                    opacity: 1;
+                }
+            }
         }
+
         .contactBox {
-            align-items: center;
+            align-items: center;  
         }
-        
-    }
-    
-    
-    
-    
+
+        .iconsAbout {
+            display: flex;
+            
+            i {
+                font-size: 50px;
+                margin: 20px auto;
+            }
+
+            i:hover {
+                color: #EB5F0A;
+            }
+        }
+
+        .contentCard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            i {
+                font-size: 50px;
+            }
+
+            i:hover {
+                color: #EB5F0A;
+            }
+        }
+    } 
 }
 
 nav {
-    a {
-	transition: all 2s !important;
-    &:hover {
-        color: map-get($generalStyles, colorOrange) !important;
-        font-size: 25px;
+
+    .nav-link  {
+	transition: all 1s;
+
+        &:hover {
+            color: map-get($generalStyles, colorOrange) !important;
+            font-size: 25px;
+        }
     }
+
+    .offcanvas.offcanvas-end  {
+        width: 50%;
     }
-    .pop {
-        width: 50% !important;
-    }
-    
 }
 
 @keyframes slidein {
@@ -178,7 +290,134 @@ nav {
 }
 
 footer {
-    .btn-social:hover {
-        color: map-get($generalStyles, colorOrange) !important;
+
+    .btn-social {
+        border: solid 1px map-get($generalStyles, colorWhite);
+
+        i:hover {
+            color: map-get($generalStyles, colorOrange);
+        }
+    }
+}
+
+/* steps projects */
+.sectionSteps {
+    background-color: #f5f5f5;
+    width: 100%;
+
+    .circlesStep {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    
+    .circlesStep li {
+        list-style: none;
+        display: inline-block;
+        float: none;
+        margin: 0 30px 0px 30px;
+    }
+    
+    .circlesStep span {
+        width: 180px;
+        height: 180px;
+        line-height: 120px;
+        border-radius: 50%;
+        background-color: none;
+        box-sizing: border-box;
+        -webkit-border-radius: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        cursor: pointer;
+        padding: 30px 0 30px 0;
+        text-align: center;
+        border: 2px solid map-get($generalStyles, colorOrange);;
+        box-shadow: 0 0 20px 2px rgba(0,0,0,0.6);
+
+        i {
+            color: map-get($generalStyles, colorBlack);
+        }
+    }
+    
+    .circlesStep span:hover {
+        background-color: map-get($generalStyles, colorOrange);
+        border: 2px solid map-get($generalStyles, colorWhite);
+
+        i:hover {
+            color: map-get($generalStyles, colorWhite);
+        }
+    }
+    
+    .lineStep {
+        height: 60px;
+        border-left: solid 2px map-get($generalStyles, colorOrange);
+        display: inline-block;
+        margin-bottom: -5px;
+        position: relative;
+    }
+    
+    .descStep {
+        border-top: solid 2px map-get($generalStyles, colorOrange);
+        padding-top: 30px;
+        border-radius: 0;
+    }
+    
+    .on {
+        display: inline;
+    }
+    
+    .off {
+        display: none;
+    }
+    
+}
+
+/* ANIMATIONS */
+.anim-bottom1 {
+    transform: translateY(800px);
+    animation: slideUp .8s ease-in-out forwards .8s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+
+.anim-bottom2 {
+    transform: translateY(800px);
+    animation: slideUp .8s ease-in-out forwards .8s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+}
+
+.anim-bottom3 {
+    transform: translateY(800px);
+    animation: slideUp .8s ease-in-out forwards .8s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translateY(800px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+}
+
+.footGradient {
+    background: linear-gradient(-45deg, map-get($generalStyles, colorOrange), rgb(235, 124, 70), #444c54, #212529);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
